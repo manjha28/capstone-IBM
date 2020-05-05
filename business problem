@@ -1,0 +1,25 @@
+2. Data Sources and Cleaning
+
+2.1. Data Sources
+Neighborhood Names and Zipcodes:
+San Francisco names and Neighborhoods will be scraped from the Healthy San Francisco Website. Using the Beautiful Soup library in Python.
+Source: http://www.healthysf.org/bdi/outcomes/zipmap.htm
+Latitude and Longitude for Neighborhoods:
+Uszipcode python library will be used to extract neighborhood locations using their zipcode search engine.
+Source: https://pypi.org/project/uszipcode/
+Restaurant Violations:
+The Restaurant Scores dataset available at the Data SF website will be utilized for recorded violations. The dataset contains records from October 2016 to November 2019.
+Source: https://data.sfgov.org/Health-and-Social-Services/Restaurant-Scores-LIVES-Standard/pyih-qa8i
+Foursquare API:
+The Foursquare API will be utilized to identify dominant restaurant types in the neighborhoods, helping us get a sense of the market we would be entering.
+Source: https://foursquare.com/
+2.2. Data Cleaning
+Actions taken on each dataset:
+Neighborhood Names and Zipcodes:
+• None
+Latitude and Longitude for Neighborhoods:
+• The longitude for the Outer Richmond neighborhood returned by uszipcode is incorrect. I have resorted to Google Maps to find the correct one and updated the data frame accordingly.
+Restaurant Violations:
+• Dropped all rows older than January 1st 2019
+• Removed columns not relevant to our analysis
+• Kept only data for neighborhoods in San Francisco City
